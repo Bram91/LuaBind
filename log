@@ -1,0 +1,813 @@
+g++ -std=gnu++1sonaza@sonaza-virtual-machine:~/Työpöytä/asd$ make >> log
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp: In function ‘bool luabind::detail::operator==(const luabind::detail::basic_iterator<luabind::detail::basic_access>&, const luabind::detail::basic_iterator<luabind::detail::basic_access>&)’:
+libs/luabind/object.hpp:567:37: error: no matching function for call to ‘operator==(const luabind::detail::basic_iterator<luabind::detail::basic_access>&, const luabind::detail::basic_iterator<luabind::detail::basic_access>&)’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+libs/luabind/object.hpp:567:37: note: candidates are:
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/luabind/detail/policy.hpp:44:0,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/bind/arg.hpp:41:24: note: template<int I> bool boost::operator==(const boost::arg<I>&, const boost::arg<I>&)
+ template< int I > bool operator==( arg<I> const &, arg<I> const & )
+                        ^
+libs/boost/bind/arg.hpp:41:24: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::arg<I>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/scoped_ptr.hpp:14:0,
+                 from libs/luabind/detail/inheritance.hpp:14,
+                 from libs/luabind/detail/instance_holder.hpp:8,
+                 from libs/luabind/detail/object_rep.hpp:31,
+                 from libs/luabind/detail/policy.hpp:52,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/smart_ptr/scoped_ptr.hpp:121:31: note: template<class T> bool boost::operator==(const boost::scoped_ptr<T>&, boost::detail::sp_nullptr_t)
+ template<class T> inline bool operator==( scoped_ptr<T> const & p, boost::detail::sp_nullptr_t ) BOOST_NOEXCEPT
+                               ^
+libs/boost/smart_ptr/scoped_ptr.hpp:121:31: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::scoped_ptr<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/scoped_ptr.hpp:14:0,
+                 from libs/luabind/detail/inheritance.hpp:14,
+                 from libs/luabind/detail/instance_holder.hpp:8,
+                 from libs/luabind/detail/object_rep.hpp:31,
+                 from libs/luabind/detail/policy.hpp:52,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/smart_ptr/scoped_ptr.hpp:126:31: note: template<class T> bool boost::operator==(boost::detail::sp_nullptr_t, const boost::scoped_ptr<T>&)
+ template<class T> inline bool operator==( boost::detail::sp_nullptr_t, scoped_ptr<T> const & p ) BOOST_NOEXCEPT
+                               ^
+libs/boost/smart_ptr/scoped_ptr.hpp:126:31: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   cannot convert ‘x’ (type ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’) to type ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1290:6: note: template<class T> bool boost::operator==(const boost::optional<T>&, const boost::optional<T>&)
+ bool operator == ( optional<T> const& x, optional<T> const& y )
+      ^
+libs/boost/optional/optional.hpp:1290:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1324:6: note: template<class T> bool boost::operator==(const boost::optional<T>&, const T&)
+ bool operator == ( optional<T> const& x, T const& y )
+      ^
+libs/boost/optional/optional.hpp:1324:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1358:6: note: template<class T> bool boost::operator==(const T&, const boost::optional<T>&)
+ bool operator == ( T const& x, optional<T> const& y )
+      ^
+libs/boost/optional/optional.hpp:1358:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1393:6: note: template<class T> bool boost::operator==(const boost::optional<T>&, boost::none_t)
+ bool operator == ( optional<T> const& x, none_t ) BOOST_NOEXCEPT
+      ^
+libs/boost/optional/optional.hpp:1393:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1427:6: note: template<class T> bool boost::operator==(boost::none_t, const boost::optional<T>&)
+ bool operator == ( none_t , optional<T> const& y ) BOOST_NOEXCEPT
+      ^
+libs/boost/optional/optional.hpp:1427:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   cannot convert ‘x’ (type ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’) to type ‘boost::none_t’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+libs/luabind/object.hpp: In function ‘bool luabind::detail::operator==(const luabind::detail::basic_iterator<luabind::detail::raw_access>&, const luabind::detail::basic_iterator<luabind::detail::raw_access>&)’:
+libs/luabind/object.hpp:574:37: error: no matching function for call to ‘operator==(const luabind::detail::basic_iterator<luabind::detail::raw_access>&, const luabind::detail::basic_iterator<luabind::detail::raw_access>&)’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+libs/luabind/object.hpp:574:37: note: candidates are:
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/luabind/detail/policy.hpp:44:0,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/bind/arg.hpp:41:24: note: template<int I> bool boost::operator==(const boost::arg<I>&, const boost::arg<I>&)
+ template< int I > bool operator==( arg<I> const &, arg<I> const & )
+                        ^
+libs/boost/bind/arg.hpp:41:24: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::arg<I>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/scoped_ptr.hpp:14:0,
+                 from libs/luabind/detail/inheritance.hpp:14,
+                 from libs/luabind/detail/instance_holder.hpp:8,
+                 from libs/luabind/detail/object_rep.hpp:31,
+                 from libs/luabind/detail/policy.hpp:52,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/smart_ptr/scoped_ptr.hpp:121:31: note: template<class T> bool boost::operator==(const boost::scoped_ptr<T>&, boost::detail::sp_nullptr_t)
+ template<class T> inline bool operator==( scoped_ptr<T> const & p, boost::detail::sp_nullptr_t ) BOOST_NOEXCEPT
+                               ^
+libs/boost/smart_ptr/scoped_ptr.hpp:121:31: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::scoped_ptr<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/scoped_ptr.hpp:14:0,
+                 from libs/luabind/detail/inheritance.hpp:14,
+                 from libs/luabind/detail/instance_holder.hpp:8,
+                 from libs/luabind/detail/object_rep.hpp:31,
+                 from libs/luabind/detail/policy.hpp:52,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/smart_ptr/scoped_ptr.hpp:126:31: note: template<class T> bool boost::operator==(boost::detail::sp_nullptr_t, const boost::scoped_ptr<T>&)
+ template<class T> inline bool operator==( boost::detail::sp_nullptr_t, scoped_ptr<T> const & p ) BOOST_NOEXCEPT
+                               ^
+libs/boost/smart_ptr/scoped_ptr.hpp:126:31: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   cannot convert ‘x’ (type ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’) to type ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1290:6: note: template<class T> bool boost::operator==(const boost::optional<T>&, const boost::optional<T>&)
+ bool operator == ( optional<T> const& x, optional<T> const& y )
+      ^
+libs/boost/optional/optional.hpp:1290:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1324:6: note: template<class T> bool boost::operator==(const boost::optional<T>&, const T&)
+ bool operator == ( optional<T> const& x, T const& y )
+      ^
+libs/boost/optional/optional.hpp:1324:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1358:6: note: template<class T> bool boost::operator==(const T&, const boost::optional<T>&)
+ bool operator == ( T const& x, optional<T> const& y )
+      ^
+libs/boost/optional/optional.hpp:1358:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1393:6: note: template<class T> bool boost::operator==(const boost::optional<T>&, boost::none_t)
+ bool operator == ( optional<T> const& x, none_t ) BOOST_NOEXCEPT
+      ^
+libs/boost/optional/optional.hpp:1393:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1427:6: note: template<class T> bool boost::operator==(boost::none_t, const boost::optional<T>&)
+ bool operator == ( none_t , optional<T> const& y ) BOOST_NOEXCEPT
+      ^
+libs/boost/optional/optional.hpp:1427:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   cannot convert ‘x’ (type ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’) to type ‘boost::none_t’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:577:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(==)
+   ^
+libs/luabind/object.hpp: In function ‘bool luabind::detail::operator!=(const luabind::detail::basic_iterator<luabind::detail::basic_access>&, const luabind::detail::basic_iterator<luabind::detail::basic_access>&)’:
+libs/luabind/object.hpp:567:37: error: no matching function for call to ‘operator!=(const luabind::detail::basic_iterator<luabind::detail::basic_access>&, const luabind::detail::basic_iterator<luabind::detail::basic_access>&)’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+libs/luabind/object.hpp:567:37: note: candidates are:
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/scoped_ptr.hpp:14:0,
+                 from libs/luabind/detail/inheritance.hpp:14,
+                 from libs/luabind/detail/instance_holder.hpp:8,
+                 from libs/luabind/detail/object_rep.hpp:31,
+                 from libs/luabind/detail/policy.hpp:52,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/smart_ptr/scoped_ptr.hpp:131:31: note: template<class T> bool boost::operator!=(const boost::scoped_ptr<T>&, boost::detail::sp_nullptr_t)
+ template<class T> inline bool operator!=( scoped_ptr<T> const & p, boost::detail::sp_nullptr_t ) BOOST_NOEXCEPT
+                               ^
+libs/boost/smart_ptr/scoped_ptr.hpp:131:31: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::scoped_ptr<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/scoped_ptr.hpp:14:0,
+                 from libs/luabind/detail/inheritance.hpp:14,
+                 from libs/luabind/detail/instance_holder.hpp:8,
+                 from libs/luabind/detail/object_rep.hpp:31,
+                 from libs/luabind/detail/policy.hpp:52,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/smart_ptr/scoped_ptr.hpp:136:31: note: template<class T> bool boost::operator!=(boost::detail::sp_nullptr_t, const boost::scoped_ptr<T>&)
+ template<class T> inline bool operator!=( boost::detail::sp_nullptr_t, scoped_ptr<T> const & p ) BOOST_NOEXCEPT
+                               ^
+libs/boost/smart_ptr/scoped_ptr.hpp:136:31: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   cannot convert ‘x’ (type ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’) to type ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1300:6: note: template<class T> bool boost::operator!=(const boost::optional<T>&, const boost::optional<T>&)
+ bool operator != ( optional<T> const& x, optional<T> const& y )
+      ^
+libs/boost/optional/optional.hpp:1300:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1334:6: note: template<class T> bool boost::operator!=(const boost::optional<T>&, const T&)
+ bool operator != ( optional<T> const& x, T const& y )
+      ^
+libs/boost/optional/optional.hpp:1334:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1368:6: note: template<class T> bool boost::operator!=(const T&, const boost::optional<T>&)
+ bool operator != ( T const& x, optional<T> const& y )
+      ^
+libs/boost/optional/optional.hpp:1368:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1403:6: note: template<class T> bool boost::operator!=(const boost::optional<T>&, boost::none_t)
+ bool operator != ( optional<T> const& x, none_t ) BOOST_NOEXCEPT
+      ^
+libs/boost/optional/optional.hpp:1403:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1437:6: note: template<class T> bool boost::operator!=(boost::none_t, const boost::optional<T>&)
+ bool operator != ( none_t, optional<T> const& y ) BOOST_NOEXCEPT
+      ^
+libs/boost/optional/optional.hpp:1437:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:567:37: note:   cannot convert ‘x’ (type ‘const luabind::detail::basic_iterator<luabind::detail::basic_access>’) to type ‘boost::none_t’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+libs/luabind/object.hpp: In function ‘bool luabind::detail::operator!=(const luabind::detail::basic_iterator<luabind::detail::raw_access>&, const luabind::detail::basic_iterator<luabind::detail::raw_access>&)’:
+libs/luabind/object.hpp:574:37: error: no matching function for call to ‘operator!=(const luabind::detail::basic_iterator<luabind::detail::raw_access>&, const luabind::detail::basic_iterator<luabind::detail::raw_access>&)’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+libs/luabind/object.hpp:574:37: note: candidates are:
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/scoped_ptr.hpp:14:0,
+                 from libs/luabind/detail/inheritance.hpp:14,
+                 from libs/luabind/detail/instance_holder.hpp:8,
+                 from libs/luabind/detail/object_rep.hpp:31,
+                 from libs/luabind/detail/policy.hpp:52,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/smart_ptr/scoped_ptr.hpp:131:31: note: template<class T> bool boost::operator!=(const boost::scoped_ptr<T>&, boost::detail::sp_nullptr_t)
+ template<class T> inline bool operator!=( scoped_ptr<T> const & p, boost::detail::sp_nullptr_t ) BOOST_NOEXCEPT
+                               ^
+libs/boost/smart_ptr/scoped_ptr.hpp:131:31: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::scoped_ptr<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/scoped_ptr.hpp:14:0,
+                 from libs/luabind/detail/inheritance.hpp:14,
+                 from libs/luabind/detail/instance_holder.hpp:8,
+                 from libs/luabind/detail/object_rep.hpp:31,
+                 from libs/luabind/detail/policy.hpp:52,
+                 from libs/luabind/detail/convert_to_lua.hpp:28,
+                 from libs/luabind/detail/call_member.hpp:30,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/smart_ptr/scoped_ptr.hpp:136:31: note: template<class T> bool boost::operator!=(boost::detail::sp_nullptr_t, const boost::scoped_ptr<T>&)
+ template<class T> inline bool operator!=( boost::detail::sp_nullptr_t, scoped_ptr<T> const & p ) BOOST_NOEXCEPT
+                               ^
+libs/boost/smart_ptr/scoped_ptr.hpp:136:31: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   cannot convert ‘x’ (type ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’) to type ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1300:6: note: template<class T> bool boost::operator!=(const boost::optional<T>&, const boost::optional<T>&)
+ bool operator != ( optional<T> const& x, optional<T> const& y )
+      ^
+libs/boost/optional/optional.hpp:1300:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1334:6: note: template<class T> bool boost::operator!=(const boost::optional<T>&, const T&)
+ bool operator != ( optional<T> const& x, T const& y )
+      ^
+libs/boost/optional/optional.hpp:1334:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1368:6: note: template<class T> bool boost::operator!=(const T&, const boost::optional<T>&)
+ bool operator != ( T const& x, optional<T> const& y )
+      ^
+libs/boost/optional/optional.hpp:1368:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1403:6: note: template<class T> bool boost::operator!=(const boost::optional<T>&, boost::none_t)
+ bool operator != ( optional<T> const& x, none_t ) BOOST_NOEXCEPT
+      ^
+libs/boost/optional/optional.hpp:1403:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’ is not derived from ‘const boost::optional<T>’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+In file included from libs/boost/optional.hpp:15:0,
+                 from libs/luabind/object.hpp:35,
+                 from libs/luabind/detail/call_member.hpp:34,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/boost/optional/optional.hpp:1437:6: note: template<class T> bool boost::operator!=(boost::none_t, const boost::optional<T>&)
+ bool operator != ( none_t, optional<T> const& y ) BOOST_NOEXCEPT
+      ^
+libs/boost/optional/optional.hpp:1437:6: note:   template argument deduction/substitution failed:
+In file included from libs/luabind/detail/call_member.hpp:34:0,
+                 from libs/luabind/wrapper_base.hpp:31,
+                 from libs/luabind/back_reference.hpp:27,
+                 from libs/luabind/class.hpp:93,
+                 from libs/luabind/luabind.hpp:28,
+                 from main.cpp:4:
+libs/luabind/object.hpp:574:37: note:   cannot convert ‘x’ (type ‘const luabind::detail::basic_iterator<luabind::detail::raw_access>’) to type ‘boost::none_t’
+       return boost::operator op(x, y); \
+                                     ^
+libs/luabind/object.hpp:578:3: note: in expansion of macro ‘LUABIND_OPERATOR_ADL_WKND’
+   LUABIND_OPERATOR_ADL_WKND(!=)
+   ^
+make: *** [main.o] Error 1
+sonaza@sonaza-virtual-machine:~/Työpöytä/asd$ 
