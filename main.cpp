@@ -3,6 +3,7 @@
 #include <lua52/lualib.h>
 #include <iostream>
 #include <luabind/luabind.hpp>
+
 bool dostring(lua_State* L, const char* str)
 {
 	if (luaL_loadbuffer(L, str, std::strlen(str), str) || lua_pcall(L, 0, 0, 0))
@@ -14,14 +15,18 @@ bool dostring(lua_State* L, const char* str)
 	}
 	return false;
 }
-
+int greet(lua_State* l)
+{
+	std::cout << "C++ is a POTATO \n";
+	return 1;
+}
 int main()
 {
 	lua_State* L = luaL_newstate();
 	luaL_openlibs(L);
-
-	dostring(L, "for i=1,10 do print(i) end ");
-
+	lua_pushcfunction(L, greet);
+    lua_setglobal(L, "greet");
+    dostring(L, "greet()");
 	lua_close(L);
 }
 

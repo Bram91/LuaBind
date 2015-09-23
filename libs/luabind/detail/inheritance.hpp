@@ -63,9 +63,9 @@ private:
     static class_id const local_id_base;
 };
 
-inline class_id_map::class_id_map()
-  : m_local_id(local_id_base)
-{}
+//inline class_id_map::class_id_map()
+//  : m_local_id(local_id_base)
+//{}
 
 inline class_id class_id_map::get(type_id const& type) const
 {

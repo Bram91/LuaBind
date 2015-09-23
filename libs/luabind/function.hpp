@@ -6,7 +6,7 @@
 # define LUABIND_FUNCTION2_081014_HPP
 
 # include <luabind/make_function.hpp>
-# include <luabind/scope.hpp>
+# include <luabind/scope.cpp>
 # include <luabind/detail/call_function.hpp>
 
 namespace luabind {
@@ -27,11 +27,11 @@ namespace detail
       {
           object fn = make_function(L, f, deduce_signature(f), policies);
 
-          add_overload(
-              object(from_stack(L, -1))
-            , name
-            , fn
-          );
+          //add_overload(
+          //    object(from_stack(L, -1))
+          //  , name
+          //  , fn
+          //);
       }
 
       char const* name;

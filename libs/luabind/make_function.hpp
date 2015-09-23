@@ -65,7 +65,7 @@ namespace detail
           catch (...)
           {
               exception_caught = true;
-              handle_exception_aux(L);
+              //handle_exception_aux(L);
           }
 
           if (exception_caught)
@@ -76,7 +76,7 @@ namespace detail
 
           if (!ctx)
           {
-              ctx.format_error(L, impl);
+              //ctx.format_error(L, impl);
               lua_error(L);
           }
 
@@ -102,12 +102,12 @@ namespace detail
 template <class F, class Signature, class Policies>
 object make_function(lua_State* L, F f, Signature, Policies)
 {
-    return detail::make_function_aux(
-        L
-      , new detail::function_object_impl<F, Signature, Policies>(
-            f, Policies()
-        )
-    );
+   // return detail::make_function_aux(
+   //     L
+   //   , new detail::function_object_impl<F, Signature, Policies>(
+   //         f, Policies()
+   //     )
+   // );
 }
 
 template <class F>
