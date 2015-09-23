@@ -2,7 +2,7 @@
 #include <lua52/lauxlib.h>
 #include <lua52/lualib.h>
 #include <iostream>
-#include <luabind/luabind.hpp>
+#include <cstring>
 
 bool dostring(lua_State* L, const char* str)
 {
