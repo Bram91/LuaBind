@@ -9,7 +9,7 @@
  
  ☐ Bind Lua classes to C++
  
- ☐ Run *.lua files
+ ☑ Run *.lua files
  
  ☐ Scopes (luabind style)
  

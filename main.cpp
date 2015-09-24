@@ -15,7 +15,9 @@ int main()
 	lua_State* L = luaL_newstate();
 	luaL_openlibs(L);
 	binder::bindFunction(L,"greet",greet);
-    binder::dostring(L, "greet()");
+    binder::doString(L, "greet()");
+    binder::doFile(L,"script.lua");
+    
 	lua_close(L);
 }
 
