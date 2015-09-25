@@ -1,10 +1,9 @@
-#ifndef MODULE_H
-#define MODULE_H
+#ifndef MODULE_HPP
+#define MODULE_HPP
 #include <lua52/lua.h>
 #include <lua52/lauxlib.h>
 #include <lua52/lualib.h>
-#include "module.cpp"
- namespace binder
+namespace binder
  {
 	 class module
 		{

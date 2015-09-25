@@ -7,7 +7,7 @@ namespace binder
 		
 	}
 
-	void module::operator[]()
+	void module::operator[](module m)
 	{
 		if (m_name)
 		{

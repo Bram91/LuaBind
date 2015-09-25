@@ -1,6 +1,5 @@
-#ifndef BINDER_H
-#define BINDER_H
-#include "binder.cpp" 
+#ifndef BINDER_HPP
+#define BINDER_HPP
 #include <lua52/lua.h>
 #include <lua52/lauxlib.h>
 #include <lua52/lualib.h>
